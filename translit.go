@@ -1,12 +1,20 @@
 package translit
 
 import (
+	"bytes"
 	"fmt"
 )
 
 func Translit(s string) string {
-	result := s
-	for _, v := range result {
+	var buffer bytes.Buffer
+
+	for _, v := range s {
+    if char, ok := dictionary[string(v)]; ok {
+      buffer.WriteString(char)
+    } else {
+      buffer.WriteString(string(v))
+    }
 	}
-	return result
+
+	return buffer.String()
 }
