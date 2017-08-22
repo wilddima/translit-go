@@ -1,5 +1,7 @@
 # Translit
 
+Translit from russian.
+
 ```go
 import "translit"
 
