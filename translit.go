@@ -2,7 +2,6 @@ package translit
 
 import (
 	"bytes"
-	"fmt"
 )
 
 func Translit(s string) string {
